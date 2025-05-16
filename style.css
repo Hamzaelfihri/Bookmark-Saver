@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16a085;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #16a085;
+}
+
+button {
+  padding: 12px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+#bookmark-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#bookmark-list li {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#bookmark-list li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#bookmark-list a {
+  color: #16a085;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#bookmark-list a:hover {
+  color: #1abc9c;
+}
+
+#bookmark-list button {
+  background-color: #e74c3c;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#bookmark-list button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+#bookmark-list button:active {
+  transform: translateY(0);
+}
+.error-message {
+  color: #e74c3c; /* Rouge vif pour l'erreur */
+  background-color: #fdecea; /* Fond légèrement rose */
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  display: none; /* Cacher par défaut */
+  text-align: center;
+}
+
+/* Pour améliorer l'apparence des messages d'erreur dans l'input */
+input:invalid {
+  border-color: #e74c3c;
+}
+
+input:focus:invalid {
+  outline: 2px solid #e74c3c;
+}
+
